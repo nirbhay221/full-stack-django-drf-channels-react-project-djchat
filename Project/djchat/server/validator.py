@@ -23,7 +23,7 @@ def validate_banner_image_size(image):
 
 
 def validate_image_file_extension(value):
-    ext = os.path.splittext(value.name)[1]
+    ext = os.path.splitext(value.name)[1]
     valid_extensions = [".jpg", ".jpeg", ".png", ".gif"]
     if not ext.lower() in valid_extensions:
         raise ValidationError("Unsupported File Extension")
